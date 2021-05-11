@@ -39,8 +39,8 @@ struct AddEventSheet: View {
             .padding()
             .font(.system(size: 25))
             .background(Color.white)
-            .cornerRadius(5)
-               
+            .cornerRadius(7)
+            .foregroundColor(.black)
             
             Button(action: {
                 viewModel.addEvent(event: Event(title: title, emoji: icon, daysLeft: Int(daysLeft) ?? 0, date: date))

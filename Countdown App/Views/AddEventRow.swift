@@ -26,7 +26,7 @@ struct AddEventRow: View {
             }, label: {
                 Image(systemName: "plus")
                     .padding()
-                    .background(Color.green)
+                    .background(Color("MintGreen"))
                     .font(.system(size: 50))
                     
             })
@@ -34,7 +34,7 @@ struct AddEventRow: View {
                 AddEventSheet(viewModel: viewModel, isPreseted: $showingSheet)
             })
         }
-        .background(Color.blue)
+        .background(Color("NavyBlue"))
         .foregroundColor(.white)
     }
     

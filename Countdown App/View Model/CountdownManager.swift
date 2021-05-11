@@ -22,6 +22,16 @@ class CountdownManager: ObservableObject {
         print(events)
     }
     
+    func deleteEvent(indexSet: IndexSet) {
+        for index in indexSet {
+            events.remove(at: index)
+        }
+    }
+    
+    func moveEventRow(_ indices: IndexSet, _ newOffset: Int) {
+        events.move(fromOffsets: indices, toOffset: newOffset)
+    }
+    
     static func getEmptyEvents() -> CountdownManager {
         
         var countdownManager = CountdownManager()

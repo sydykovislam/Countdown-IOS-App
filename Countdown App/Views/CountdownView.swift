@@ -11,29 +11,54 @@ struct CountdownView: View {
     
     @ObservedObject var viewModel: CountdownManager
     
+    
     var body: some View {
-        ZStack {
-            List {
+        NavigationView {
+            ZStack {
+                List {
                     
                     AddEventRow(viewModel: viewModel)
                         .listRowInsets(EdgeInsets())
                         .padding(.bottom, 5)
                     
                     ForEach(viewModel.events) { event in
-                        EventRow(event: event)
+                        
+                        ZStack {
+                            NavigationLink(
+                                destination: EventsDetales(event: event),
+                                label: {
+                                    EmptyView()
+                                })
+                            EventRow(event: event)
+                        }
+                        
+                            
+                        
                     }
-                        .listRowInsets(EdgeInsets())
-                        .padding(.bottom, 5)
-            }
-            
-            if viewModel.events.count == 0 {
+                    .onDelete(perform: { indexSet in
+                        viewModel.deleteEvent(indexSet: indexSet)
+                    })
+                    .onMove(perform: { indices, newOffset in
+                        viewModel.moveEventRow(indices, newOffset)
+                    })
+                    .listRowInsets(EdgeInsets())
+                }
+                .listStyle(PlainListStyle())
                 
-                Text("Please add event")
-                    .foregroundColor(.gray)
-                    .font(.system(size: 25))
+                
+                if viewModel.events.count == 0 {
+                    
+                    Text("Please add event")
+                        .foregroundColor(.gray)
+                        .font(.system(size: 25))
+                }
             }
+            .navigationBarTitle(Text("Countdowns"), displayMode: .inline)            .toolbar(content: {
+                EditButton()
+            })
+            
         }
-        
+
         
     }
 }

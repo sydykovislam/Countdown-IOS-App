@@ -33,8 +33,9 @@ struct EventRow: View {
             }
                 .padding()
         }
-            .background(Color.purple)
+            .background(Color("Amethyst"))
             .foregroundColor(.white)
+            .padding(.bottom, 5)
             
     }
 }
