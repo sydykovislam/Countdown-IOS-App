@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		DD1382A1264A702800368E21 /* CircularIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD1382A0264A702800368E21 /* CircularIcon.swift */; };
 		DD1382A5264A70C900368E21 /* EventsDetales.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD1382A4264A70C900368E21 /* EventsDetales.swift */; };
+		DD1382A9264BE50300368E21 /* Counter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD1382A8264BE50300368E21 /* Counter.swift */; };
+		DD1382AD264BE97200368E21 /* CounterElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD1382AC264BE97200368E21 /* CounterElement.swift */; };
 		DDF5F8BC26469BC00092363A /* Countdown_AppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDF5F8BB26469BC00092363A /* Countdown_AppApp.swift */; };
 		DDF5F8BE26469BC00092363A /* CountdownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDF5F8BD26469BC00092363A /* CountdownView.swift */; };
 		DDF5F8C026469BC60092363A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DDF5F8BF26469BC60092363A /* Assets.xcassets */; };
@@ -21,8 +22,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		DD1382A0264A702800368E21 /* CircularIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularIcon.swift; sourceTree = "<group>"; };
 		DD1382A4264A70C900368E21 /* EventsDetales.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsDetales.swift; sourceTree = "<group>"; };
+		DD1382A8264BE50300368E21 /* Counter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Counter.swift; sourceTree = "<group>"; };
+		DD1382AC264BE97200368E21 /* CounterElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterElement.swift; sourceTree = "<group>"; };
 		DDF5F8B826469BBF0092363A /* Countdown App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Countdown App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDF5F8BB26469BC00092363A /* Countdown_AppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Countdown_AppApp.swift; sourceTree = "<group>"; };
 		DDF5F8BD26469BC00092363A /* CountdownView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountdownView.swift; sourceTree = "<group>"; };
@@ -50,9 +52,17 @@
 		DD13829F264A6FC100368E21 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				DD1382A0264A702800368E21 /* CircularIcon.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		DD1382AB264BE90700368E21 /* CounterView */ = {
+			isa = PBXGroup;
+			children = (
+				DD1382A8264BE50300368E21 /* Counter.swift */,
+				DD1382AC264BE97200368E21 /* CounterElement.swift */,
+			);
+			path = CounterView;
 			sourceTree = "<group>";
 		};
 		DDF5F8AF26469BBF0092363A = {
@@ -96,6 +106,7 @@
 		DDF5F8CB26469BEB0092363A /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				DD1382AB264BE90700368E21 /* CounterView */,
 				DD13829F264A6FC100368E21 /* Helpers */,
 				DDF5F8BD26469BC00092363A /* CountdownView.swift */,
 				DDF5F8D62646A3AA0092363A /* EventRow.swift */,
@@ -194,10 +205,11 @@
 				DDF5F8BE26469BC00092363A /* CountdownView.swift in Sources */,
 				DDF5F8DD2647BA5A0092363A /* AddEventSheet.swift in Sources */,
 				DDF5F8DA2647BA340092363A /* AddEventRow.swift in Sources */,
-				DD1382A1264A702800368E21 /* CircularIcon.swift in Sources */,
 				DDF5F8CE26469C270092363A /* CountdownManager.swift in Sources */,
 				DDF5F8D72646A3AA0092363A /* EventRow.swift in Sources */,
+				DD1382A9264BE50300368E21 /* Counter.swift in Sources */,
 				DDF5F8BC26469BC00092363A /* Countdown_AppApp.swift in Sources */,
+				DD1382AD264BE97200368E21 /* CounterElement.swift in Sources */,
 				DD1382A5264A70C900368E21 /* EventsDetales.swift in Sources */,
 				DDF5F8D42646A13A0092363A /* Event.swift in Sources */,
 			);

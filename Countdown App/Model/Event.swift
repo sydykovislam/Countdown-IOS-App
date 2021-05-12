@@ -12,8 +12,19 @@ struct Event: Identifiable {
     var id = UUID()
     var title: String
     var emoji: String
-    var daysLeft: Int
     var date: Date
+    
+    var currentDate: Date {
+        Date()
+    }
+    
+    var daysLeft: Int {
+        Calendar.current.dateComponents([.day], from: currentDate, to: date).day!
+    }
+    
+    var diffs: DateComponents {
+        Calendar.current.dateComponents([.month, .day, .hour, .minute, .second], from: currentDate, to: date)
+    }
     
     let formatter = DateFormatter()
     

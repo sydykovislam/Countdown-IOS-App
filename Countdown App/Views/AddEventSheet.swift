@@ -12,9 +12,7 @@ struct AddEventSheet: View {
     var viewModel: CountdownManager
     
     @State var title: String = ""
-    @State var icon: String = ""
-    @State var daysLeft :String = ""
-    
+    @State var icon: String = ""    
     @State private var date = Date()
     
     @Binding var isPreseted: Bool
@@ -28,7 +26,6 @@ struct AddEventSheet: View {
             
             FormTextField(text: $title, placeholder: "Title")
             FormTextField(text: $icon, placeholder: "Emoji")
-            FormTextField(text: $daysLeft, placeholder: "Days Left")
      
                 
             DatePicker(
@@ -43,7 +40,7 @@ struct AddEventSheet: View {
             .foregroundColor(.black)
             
             Button(action: {
-                viewModel.addEvent(event: Event(title: title, emoji: icon, daysLeft: Int(daysLeft) ?? 0, date: date))
+                viewModel.addEvent(event: Event(title: title, emoji: icon,  date: date))
                 isPreseted = false
                 
             }, label: {

@@ -11,15 +11,15 @@ class CountdownManager: ObservableObject {
     
     @Published var events = [
         
-        Event(title: "My Birthday", emoji: "🎂", daysLeft: 7, date: Date()),
-        Event(title: "Uni Graduation", emoji: "🎓", daysLeft: 458, date: Date()),
-        Event(title: "Ramadan", emoji: "🌙", daysLeft: 9, date: Date())
+        Event(title: "My Birthday", emoji: "🎂", date: Date()),
+        Event(title: "Uni Graduation", emoji: "🎓", date: Date()),
+        Event(title: "Ramadan", emoji: "🌙", date: Date())
         
     ]
     
     func addEvent(event: Event) {
         events.append(event)
-        print(events)
+        print(event.diffs)
     }
     
     func deleteEvent(indexSet: IndexSet) {

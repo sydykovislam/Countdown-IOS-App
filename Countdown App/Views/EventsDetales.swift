@@ -32,6 +32,10 @@ struct EventsDetales: View {
                 .padding(2)
             
             Spacer()
+            
+            Counter(event: event)
+            
+            Spacer()
             Spacer()
         }
         .background(Color("Amethyst"))
